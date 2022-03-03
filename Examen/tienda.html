@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Shop</title>
+    <!--referencia css-->
+    <link rel="shortcut icon" href="Pc.png">
+    <link rel="stylesheet" href="Estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--borrar-->
+    <script src="logica tienda.js"></script>
+    <header class="Barra">
+        <div class="logo">
+            <img align="left" src="Pc.png" width="60px" height="60px"> <h1 align="right">HardwareShop</h1>
+        </div>
+        <div class="container">
+            
+            <Nav class="menu">
+               <ul>
+                   <li><a
+                     href="#">Inicio</a>
+                    </li>
+                    <li><a
+                        href="#">Productos <i class="icon-abajo2"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"> Procesadores </a></li>
+                            <li><a href="#">
+                                Tarjetas Graficas
+                            </a></li>
+                            <li><a href="#">
+                                Placas Madre
+                            </a></li>
+                            <li><a href="#">
+                                Fuentes de Alimentacion
+                            </a></li>
+                        </ul>
+                       </li>
+                       <li><a
+                        href="#">Desarrolladores <i class="icon-abajo2"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                Miguel Angel Martinez Castro
+                            </a></li>
+                            <li><a href="#">
+                                Aaron Gamaliel Zamora Toribio
+                            </a></li>
+                            <li><a href="#">
+                                Irving Alberto Martinez Santos
+                            </a></li>
+                            <li><a href="#">
+                                Eduardo Viñas Valdez
+                            </a></li>
+                            
+                        </ul>
+                       </li>
+                       <li><a
+                        href="#">Contacto <i class="icon-abajo2"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                Email: irving_1320114055@uptecamac.edu.mx
+                            </a></li>
+                        </ul>
+                       </li>
+               </ul> 
+            </Nav>
+        </div>
+    </header>
+    <div class="Portada"></div>
+    <h2 align="center">Calidad a tu alcance</h2><br>
+        <div align="center" class="">
+            <!--separador-->
+            <p class="pc">Componentes de PC</p><br>
+            <!--separador-->
+
+            <input class="Buscador" id="objet"type="text" placeholder="Busca tu componente aqui" style="color: white;">  
+            <select id="op">
+                <option value="1">Intel</option>
+                <option value="2">AMD</option>
+            </select>
+            <input class="Enviar" onclick="funcionamiento()" type="submit" name="comprar">
+            <button class="Enviar" onclick="graficas()" type="submit" name="graficar">Graficar</button>
+            <button class="Enviar" onclick="borrar()" type="submit" name="graficar">Eliminar</button>
+
+            <br>
+            <br>
+            <h3 align="center">Productos</h3><br>
+            <div class="Productos">
+            <table>
+             <!--separador-->
+        
+            <tr>
+                <th>Intel</th>
+                <th> <img src="Intel-Logo.png" style="max-width: 100%;"/> </th>
+                <th>Core i5</th> 
+                <th><img src="Corei5.jpg" style="max-width: 100%;" /></th>
+            </tr>
+            <!--separador-->
+
+
+            <tr>
+                <th>AMD</th>
+                <th><img src="Ryzen.png" style="max-width: 100%;"/> </th>
+                <th>Ryzen 5</th>
+                <th><img src="Ryzen 5.jpeg" style="max-width: 100%;"/></th>
+            </tr>
+
+            <!--separador-->
+
+            <tr>
+                <th>Intel</th>
+                <th> <img src="Intel-Logo.png" style="max-width: 100%;"/> </th>
+                <th>Xeon</th>
+                <th><img src="Xeon.png" style="max-width: 100%;"/></th>
+            </tr>
+            
+            <!--separador-->
+
+            <tr>
+                <th>AMD</th>
+                <th><img src="Ryzen.png" style="max-width: 100%;"/></th>
+                <th>Opteron</th>
+                <th><img src="Opteron.jpg" style="max-width: 100%;"/></th>
+            </tr>
+            
+            <!--separador-->
+
+            <tr>
+                <th>Intel</th>
+                <th> <img src="Intel-Logo.png" style="max-width: 100%;"/></th>
+                <th>Core i9</th>
+                <th><img src="Core i9.jpg" style="max-width: 100%;"/></th>
+            </tr>
+          
+            <!--separador-->
+
+            <tr>
+                <th>AMD</th>
+                <th> <img src="Ryzen.png" style="max-width: 100%;"/> </th>
+                <th>Threadripper</th>
+                <th><img src="Threadripper.jpg" style="max-width: 100%;"/></th>
+            </tr>
+        </table>
+    </div>  
+            
+        </div>
+        <!--seleccionados-->
+
+        <h2 class="CPS" >Carrito</h2>
+        <div class="Carrito">
+            <!--carrito-->
+
+            <label id="uno"></label>
+            <br>
+            <label id="dos"></label>
+            <br>
+            <label  id="tres"></label>
+            <br>
+            <label id="cuatro"></label>
+            <br>
+            <label id="cinco"></label>
+            <br>
+            <label id="seis"></label>
+            <br>
+            <label id="precios"></label>
+        </div>
+
+        <canvas id="myChart" width="400" height="400" color="#ffffff"></canvas>
+</body>
+</html>
