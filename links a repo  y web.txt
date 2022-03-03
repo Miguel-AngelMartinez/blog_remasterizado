@@ -1,0 +1,2 @@
+web: https://remake-blog.herokuapp.com/
+repositorio: https://github.com/Miguel-AngelMartinez/blog_remasterizado/tree/main/Examen
